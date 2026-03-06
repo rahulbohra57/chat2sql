@@ -21,6 +21,8 @@ Type a question like *"Show top 5 employees by salary"* and the system:
 5. Returns results as a table + bar chart
 6. Shows the generated SQL below the results
 
+<img width="1536" height="1024" alt="chat2sql" src="https://github.com/user-attachments/assets/a83f4e5e-cd2c-4870-a914-4d59bbd2befd" />
+
 ---
 
 ## Tech Stack
