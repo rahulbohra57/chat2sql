@@ -1,7 +1,7 @@
 # Chat2SQL — AI SQL Analyst
 
 > **Live App:** [https://chat2sql-frontend.onrender.com](https://chat2sql-frontend.onrender.com)
-> **API:** [https://chat2sql-backend.onrender.com](https://chat2sql-backend.onrender.com)
+> **API:** [https://chat2sql-ctjb.onrender.com](https://chat2sql-ctjb.onrender.com)
 
 Ask questions about your PostgreSQL database in plain English. Powered by Google Gemini, FastAPI, and Next.js.
 
@@ -190,7 +190,7 @@ Converts a question to SQL and returns results.
 2. Root directory: `frontend`
 3. Build command: `npm install && npm run build`
 4. Start command: `npm start`
-5. Environment variable: `NEXT_PUBLIC_API_URL=https://chat2sql-backend.onrender.com`
+5. Environment variable: `NEXT_PUBLIC_API_URL=https://chat2sql-ctjb.onrender.com`
 
 ---
 
