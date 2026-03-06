@@ -3,8 +3,8 @@
 * **Live App:** [https://chat2sql-frontend.onrender.com](https://chat2sql-frontend.onrender.com)
 * **API:** [https://chat2sql-ctjb.onrender.com](https://chat2sql-ctjb.onrender.com)
 * **For testing:**
-- id: admin
-- password: admin@123
+  - id: admin
+  - password: admin@123
 
 Ask questions about your PostgreSQL database in plain English. Powered by Google Gemini, FastAPI, and Next.js.
 
