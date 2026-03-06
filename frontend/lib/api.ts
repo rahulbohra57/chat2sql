@@ -39,12 +39,14 @@ export async function getSchemas(): Promise<SchemaInfo[]> {
 
 export async function askDatabase(
   question: string,
-  schema: string | null
+  schema: string | null,
+  signal?: AbortSignal
 ): Promise<QueryResponse> {
   const res = await fetch(`${API_URL}/query`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question, schema }),
+    signal,
   });
 
   if (!res.ok) {

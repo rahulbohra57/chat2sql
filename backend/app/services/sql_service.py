@@ -30,6 +30,8 @@ def execute_sql(sql: str) -> list[dict]:
 
     try:
         with engine.connect() as conn:
+            # Kill the query automatically if it runs longer than 30 seconds
+            conn.execute(text("SET statement_timeout = '30000'"))
             result = conn.execute(text(sql))
             columns = list(result.keys())
             rows = result.fetchmany(ROW_LIMIT)
