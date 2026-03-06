@@ -4,17 +4,24 @@ import { useState, useEffect } from "react";
 import { getSchemas, type SchemaInfo } from "@/lib/api";
 import ChatBox from "./components/ChatBox";
 import SchemaPanel from "./components/SchemaPanel";
+import LoginScreen from "./components/LoginScreen";
 
 export default function Home() {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [schemas, setSchemas] = useState<SchemaInfo[]>([]);
   const [selectedSchema, setSelectedSchema] = useState<string | null>(null);
   const [schemaError, setSchemaError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!loggedIn) return;
     getSchemas()
       .then(setSchemas)
       .catch(() => setSchemaError("Could not load schema — is the backend running?"));
-  }, []);
+  }, [loggedIn]);
+
+  if (!loggedIn) {
+    return <LoginScreen onLogin={() => setLoggedIn(true)} />;
+  }
 
   return (
     <div className="app-layout">
